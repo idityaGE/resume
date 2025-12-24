@@ -64,14 +64,28 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+\newcommand{\resumeExperienceHeading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\companyLink}[2]{%
+  \href{#2}{\underline{#1}\,\textsuperscript{\faExternalLink}}%
+}
+
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} 
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 
-% Project title with external link icon
-\newcommand{\projectLink}[3]{\href{#2}{\textbf{#1} \faExternalLink} $|$ \emph{#3}}
+\newcommand{\projectLink}[3]{%
+  \href{#2}{\textbf{\underline{#1}}\;\textsuperscript{\faExternalLink}}%
+  \ $|$\ \emph{#3}%
+}
 
 \begin{document}
 
@@ -79,14 +93,15 @@
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\LARGE Aditya Maurya} & \\
   NH-8, Bandar Sindri, Dist-Ajmer-305817, Rajasthan, INDIA & Mobile: +91-8079035137 \\
-  \href{https://iditya.tech}{\underline{iditya.tech}} & \href{mailto:adiimaurya02@gmail.com}{\underline{adiimaurya02@gmail.com}} \\
+  \href{https://iditya.dev}{\underline{iditya.dev}} & 
+  \href{mailto:idityage@gmail.com}{\underline{idityage@gmail.com}} \\
   \href{https://linkedin.com/in/idityage}{\underline{linkedin.com/in/idityage}} & \href{https://github.com/idityaGE}{\underline{github.com/idityaGE}} \\
 \end{tabular*}
 
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
-    \resumeSubheading{Central University Of Rajasthan}{Ajmer, Rajasthan}{Bachelor of Technology in Computer Science and Engineering}{Aug. 2023 -- May 2027}
+    \resumeSubheading{Central University Of Rajasthan}{Ajmer, Rajasthan}{Bachelor of Technology in Computer Science and Engineering}{Aug 2023 -- May 2027}
     \resumeItemListStart
       \resumeItem{\textbf{CGPA:} 8.66 (Till 3rd Sem)}
     \resumeItemListEnd
@@ -99,32 +114,42 @@
 %-----------EXPERIENCE-----------
 \section{Experience}
 \resumeSubHeadingListStart
-  \resumeSubheading{Freelance Full-Stack Developer}{Remote}{Self-employed}{Jan 2025 -- Present}
-    \resumeItem{\projectLink{BloomKnot}{https://bloomknot.in/}{Next.js, Cal.com, Better Auth, Nodemailer, Prisma, Postgres, Shadcn UI}}
-    \resumeItemListStart
-      \resumeItem{Built and deployed a modern web platform using \textbf{Next.js} and \textbf{TypeScript} with dynamic scheduling via \textbf{Cal.com}}
-      \resumeItem{Integrated \textbf{Better Auth} for secure authentication and used \textbf{Nodemailer} for transactional emails}
-      \resumeItem{Implemented admin-side tools for vendor coordination and logistics management}
-    \resumeItemListEnd
-    \vspace{6pt}
-    \resumeItem{\projectLink{Hyper Digital}{https://www.hyperdigital.in/}{Next.js, TypeScript, Cal.com, Nodemailer, Motion, Shadcn UI}}
-    \resumeItemListStart
-      \resumeItem{Designed and developed a fully responsive, SEO-friendly business website using \textbf{Next.js} and \textbf{Shadcn UI}}
-      \resumeItem{Enabled client onboarding via \textbf{Cal.com} integration and dynamic forms using \textbf{TypeScript} and \textbf{Nodemailer}}
-      \resumeItem{Collaborated with the agency to align branding, messaging, and layout with business goals}
-    \resumeItemListEnd
+
+  \resumeExperienceHeading
+{Software Engineer Intern - \companyLink{Hooman Digital}{https://www.hooman.digital/}}
+{Oct -- Nov 2025}
+  \resumeItemListStart
+    \resumeItem{Worked on AI-driven products using \textbf{MCP} and \textbf{AI SDK}, building and integrating intelligent chat and automation workflows}
+    \resumeItem{Contributed to the \textbf{Nosana-deployer MCP} project and its \href{https://nosanachat.inferia.ai/ask?tool=deployer}{\underline{chat integration}}}
+    \resumeItem{Integrated \textbf{Stripe} payments to \href{https://chartor.ai}{\underline{chartor.ai}}, including secure checkout flows and webhook handling}
+    \resumeItem{Designed, containerized, and deployed services on \textbf{AWS ECS} with \textbf{Secrets Manager}}
+    \resumeItem{Built \textbf{CI/CD pipelines} using \textbf{GitHub Actions} for automated production deployments}
+    \resumeItem{Worked across \textbf{Next.js}, \textbf{Express.js}, and \textbf{Electron.js}, improving stability and developer experience}
+  \resumeItemListEnd
+
+\resumeExperienceHeading
+{Freelance Full-Stack Developer - \companyLink{Hyper Digital}{https://www.hyperdigital.in/}}
+{Jan 2025}
+\resumeItemListStart
+  \resumeItem{Designed and developed a responsive, SEO-optimized business website using \textbf{Next.js} and \textbf{Shadcn UI}}
+  \resumeItem{Built an internal \textbf{admin dashboard} to manage and review multiple form submissions from the website}
+  \resumeItem{Implemented secure document uploads to \textbf{AWS S3}, enabling structured storage and retrieval of files}
+  \resumeItem{Integrated \textbf{Cal.com} for scheduling and automated contact workflows using \textbf{TypeScript} and \textbf{Nodemailer}}
+\resumeItemListEnd
+
+
 \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
 \section{Projects}
 \resumeSubHeadingListStart
-  \resumeProjectHeading{\projectLink{Blind Chat}{https://blind-curaj.vercel.app/}{Next.js, TypeScript, Socket.io, Redis, Prisma, Postgres, Shadcn UI}}{}
+  \resumeProjectHeading{\projectLink{Blind Chat}{https://iditya.dev/projects/blind-chat}{Next.js, TypeScript, Socket.io, Redis, Prisma, Postgres, Shadcn UI}}{}
     \resumeItemListStart
       \resumeItem{Built a real-time anonymous chat platform for college students using official email authentication}
       \resumeItem{Implemented WebSocket-based real-time messaging with \textbf{Socket.io} and backend rate-limiting using \textbf{Redis}}
       \resumeItem{Easily customizable via a simple config file to support any college's email}
     \resumeItemListEnd
-  \resumeProjectHeading{\projectLink{Zapier}{https://github.com/idityaGE/_zapier}{Kafka, Turborepo, Next.js, Zustand, TypeScript, Express, Prisma, Docker}}{}
+  \resumeProjectHeading{\projectLink{Zapier}{https://iditya.dev/projects/zapier}{Kafka, Turborepo, Next.js, Zustand, TypeScript, Express, Prisma, Docker}}{}
     \resumeItemListStart
       \resumeItem{Created an open-source automation platform with a trigger-action framework similar to Zapier}
       \resumeItem{Supports extensible app connectors and customizable workflows with reliable \textbf{Kafka}-based messaging}
@@ -142,14 +167,15 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-    \textbf{Languages}{: C/C++, Rust, Python, Java, TypeScript, Golang, HTML/CSS, Bash} \\
-    \textbf{Web 3}{: Solana, Ethereum, Web3.js, Ether, Wagmi, Solidity, Wallet Adaptors} \\
-    \textbf{Frameworks}{: React, Node.js, Next.js, Express, Hono.js, GraphQL, Web3.js} \\
-    \textbf{Libraries}{: TailwindCSS, Zustand, Socket.io, TanStack Query, Turborepo, Motion, Vitest, Jest} \\
-    \textbf{Database}{: PostgreSQL, MongoDB, Redis, MySQL} \\
-    \textbf{Developer Tools}{: Git, GitHub, VS Code, Postman, Linux} \\
-    \textbf{DevOps}{: AWS, Docker, Kubernetes, GitHub Actions, Apache Kafka, Cloudflare}
+    \textbf{Languages}{: C/C++, Rust, Python, TypeScript, Golang, HTML/CSS, Bash} \\[2pt]
+    \textbf{Web 3}{: Solana, Ethereum, @solana/Web3.js, Ether, Anchor, Solidity, Wallet Adaptors} \\[2pt]
+    \textbf{Frameworks}{: React, Node.js, Next.js, ExpressJS, HonoJS, GraphQL, ESLint, Prettier} \\[2pt]
+    \textbf{Libraries}{: TailwindCSS, Zustand, Socket.io, TanStack Query, Turborepo, Motion, Vitest, Jest} \\[2pt]
+    \textbf{Database}{: PostgreSQL, MongoDB, Redis, MySQL} \\[2pt]
+    \textbf{Developer Tools}{: Git, GitHub, VS Code, Postman, Linux, Slack} \\[2pt]
+    \textbf{DevOps}{: AWS (S3, EC2, ECR, ECS, VPC, Secrets Manager, DynamoDB), Docker, Kubernetes, GitHub Actions, Apache Kafka, Prometheus, Grafana}
   }}
 \end{itemize}
+
 
 \end{document}
