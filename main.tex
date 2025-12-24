@@ -73,7 +73,7 @@
 
 
 \newcommand{\companyLink}[2]{%
-  \href{#2}{\underline{#1}\,\textsuperscript{\faExternalLink}}%
+  \href{#2}{#1\,\textsuperscript{\faExternalLink}}%
 }
 
 \newcommand{\resumeItemListStart}{\begin{itemize}}
@@ -83,7 +83,7 @@
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 
 \newcommand{\projectLink}[3]{%
-  \href{#2}{\textbf{\underline{#1}}\;\textsuperscript{\faExternalLink}}%
+  \href{#2}{\textbf{#1}\;\textsuperscript{\faExternalLink}}%
   \ $|$\ \emph{#3}%
 }
 
@@ -143,25 +143,40 @@
 %-----------PROJECTS-----------
 \section{Projects}
 \resumeSubHeadingListStart
-  \resumeProjectHeading{\projectLink{Blind Chat}{https://iditya.dev/projects/blind-chat}{Next.js, TypeScript, Socket.io, Redis, Prisma, Postgres, Shadcn UI}}{}
-    \resumeItemListStart
-      \resumeItem{Built a real-time anonymous chat platform for college students using official email authentication}
-      \resumeItem{Implemented WebSocket-based real-time messaging with \textbf{Socket.io} and backend rate-limiting using \textbf{Redis}}
-      \resumeItem{Easily customizable via a simple config file to support any college's email}
-    \resumeItemListEnd
-  \resumeProjectHeading{\projectLink{Zapier}{https://iditya.dev/projects/zapier}{Kafka, Turborepo, Next.js, Zustand, TypeScript, Express, Prisma, Docker}}{}
-    \resumeItemListStart
-      \resumeItem{Created an open-source automation platform with a trigger-action framework similar to Zapier}
-      \resumeItem{Supports extensible app connectors and customizable workflows with reliable \textbf{Kafka}-based messaging}
-      \resumeItem{Modular architecture with \textbf{Turborepo} for scalable microservice development and deployment}
-    \resumeItemListEnd
-  \resumeProjectHeading{\projectLink{Solana Token Launchpad}{https://solana-token-lauchpad.vercel.app/}{React, TypeScript, Solana Web3.js, SPL Token, Shadcn}}{}
-    \resumeItemListStart
-      \resumeItem{Developed a dApp to launch custom tokens on the \textbf{Solana} blockchain with full metadata support}
-      \resumeItem{Integrated \textbf{Solana SPL Token} and \textbf{Anza Wallet Adapter} for seamless user wallet interaction}
-      \resumeItem{Designed with \textbf{Shadcn UI} and \textbf{TailwindCSS} for a polished user experience}
-    \resumeItemListEnd
+
+  \resumeProjectHeading
+  {\projectLink{TypeCast}{https://iditya.dev/projects/typecast}{Tauri 2, Rust, React, Vite, Tailwind CSS, rdev}}
+  {}
+  \resumeItemListStart
+    \resumeItem{Built a cross-platform keystroke visualizer overlay for screen recording using \textbf{Tauri (Rust + React)}}
+    \resumeItem{Implemented a global keystroke listener in \textbf{Rust} using \textbf{rdev}, emitting real-time events to the UI via Tauri window events}
+    \resumeItem{Designed a transparent, click-through, always-on-top overlay visible across all workspaces and virtual desktops}
+    \resumeItem{Added system tray controls to start/stop monitoring and manage application lifecycle}
+    \resumeItem{Focused on privacy-first design with ephemeral in-memory events and zero disk or network logging}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+  {\projectLink{ExpTrack}{https://iditya.dev/projects/exptrack}{Expo, React Native, Rust, Axum, SQLx, PostgreSQL}}
+  {}
+  \resumeItemListStart
+    \resumeItem{Developed a full-stack expense tracker with a \textbf{React Native (Expo)} mobile app and a \textbf{Rust (Axum)} backend}
+    \resumeItem{Designed REST APIs using \textbf{Axum} with layered middleware, shared state management, and consistent responses via \textbf{IntoResponse}}
+    \resumeItem{Integrated \textbf{PostgreSQL} with \textbf{SQLx} for type-safe queries and schema-driven data access}
+    \resumeItem{Implemented secure local storage for authentication tokens and efficient data fetching using \textbf{TanStack Query}}
+    \resumeItem{Built validated forms using \textbf{React Hook Form} with \textbf{Zod} and reusable native UI components}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+  {\projectLink{Zapier}{https://iditya.dev/projects/zapier}{Kafka, Turborepo, Next.js, TypeScript, Express, Prisma, Docker}}
+  {}
+  \resumeItemListStart
+    \resumeItem{Built an open-source automation platform with a trigger–action workflow model similar to Zapier}
+    \resumeItem{Implemented event-driven processing using \textbf{Kafka} for reliable and scalable message handling}
+    \resumeItem{Designed a modular monorepo architecture using \textbf{Turborepo} to support independent services}
+  \resumeItemListEnd
+
 \resumeSubHeadingListEnd
+
 
 %-----------SKILLS-----------
 \section{Technical Skills}
