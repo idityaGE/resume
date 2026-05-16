@@ -1,0 +1,165 @@
+%-------------------------
+% Resume in LaTeX - Improved Version
+% Author: Aditya Maurya
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\usepackage{lmodern} % Modern font for better readability
+
+% ATS-friendly PDF (only for pdfTeX, skipped in XeTeX/Tectonic)
+\ifx\pdfmatch\undefined\else
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-2pt}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} 
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+% Project title with link (ATS-friendly, no icons)
+\newcommand{\projectLink}[3]{\href{#2}{\textbf{#1}} -- \emph{#3}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+  \textbf{\Huge Aditya Maurya} \\[4pt]
+  \small
+  Ajmer, Rajasthan, India \textbar{}
+  +91-8079035137 \textbar{}
+  \href{mailto:adiimaurya02@gmail.com}{adiimaurya02@gmail.com} \\[2pt]
+  \href{https://linkedin.com/in/idityage}{linkedin.com/in/idityage} \textbar{}
+  \href{https://github.com/idityaGE}{github.com/idityaGE} \textbar{}
+  \href{https://iditya.tech}{iditya.tech}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\small{
+Full-Stack Developer with hands-on experience building production web applications and Web3 dApps. Proficient in Next.js, TypeScript, and blockchain technologies (Solana, Ethereum). Delivered freelance projects for real clients, architected scalable systems using microservices and event-driven patterns, and built developer tools used by the community. Passionate about clean code, system design, and shipping products that solve real problems.
+}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading{Full-Stack Developer (Freelance)}{Jan 2025 -- Present}{Contract-based client projects}{Remote}
+    \resumeItem{\projectLink{BloomKnot}{https://bloomknot.in/}{Next.js, TypeScript, Cal.com, Better Auth, Prisma, PostgreSQL}}
+    \resumeItemListStart
+      \resumeItem{Architected and deployed a wedding coordination platform serving \textbf{50+ vendors} with real-time scheduling and booking management}
+      \resumeItem{Implemented secure authentication flow using \textbf{Better Auth} with role-based access for admins, vendors, and customers}
+      \resumeItem{Built automated email notification system using \textbf{Nodemailer}, reducing manual follow-ups by \textbf{70\%}}
+    \resumeItemListEnd
+    \vspace{6pt}
+    \resumeItem{\projectLink{Hyper Digital}{https://www.hyperdigital.in/}{Next.js, TypeScript, Cal.com, Framer Motion, Tailwind CSS}}
+    \resumeItemListStart
+      \resumeItem{Designed and developed a fully responsive, SEO-optimized agency website achieving \textbf{95+ Lighthouse score}}
+      \resumeItem{Integrated \textbf{Cal.com} for automated client onboarding, reducing scheduling overhead by \textbf{80\%}}
+      \resumeItem{Collaborated directly with stakeholders to align UI/UX with business goals and brand identity}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+  \resumeProjectHeading{\projectLink{Blind Chat}{https://blind-curaj.vercel.app/}{Next.js, TypeScript, Socket.io, Redis, Prisma, PostgreSQL}}{}
+    \resumeItemListStart
+      \resumeItem{Built a real-time anonymous chat platform for university students with \textbf{.edu email verification}}
+      \resumeItem{Engineered WebSocket-based messaging using \textbf{Socket.io} with \textbf{Redis pub/sub} for horizontal scaling}
+      \resumeItem{Implemented rate-limiting and spam prevention, handling \textbf{1000+ messages/minute} without degradation}
+    \resumeItemListEnd
+  \resumeProjectHeading{\projectLink{FlowForge (Automation Engine)}{https://github.com/idityaGE/_zapier}{Kafka, Turborepo, Next.js, Express, Prisma, Docker}}{}
+    \resumeItemListStart
+      \resumeItem{Created an open-source workflow automation platform with trigger-action framework and extensible connectors}
+      \resumeItem{Designed event-driven architecture using \textbf{Apache Kafka} ensuring reliable message delivery with \textbf{zero data loss}}
+      \resumeItem{Structured as a \textbf{Turborepo monorepo} with shared packages, enabling scalable microservice deployment}
+    \resumeItemListEnd
+  \resumeProjectHeading{\projectLink{Solana Token Launchpad}{https://solana-token-launchpad.vercel.app/}{React, TypeScript, Solana Web3.js, SPL Token}}{}
+    \resumeItemListStart
+      \resumeItem{Developed a Web3 dApp enabling users to launch custom SPL tokens on \textbf{Solana} with metadata and mint authority}
+      \resumeItem{Integrated \textbf{Phantom} and \textbf{Solflare} wallets using Anza Wallet Adapter for seamless UX}
+      \resumeItem{Implemented token creation flow with on-chain metadata storage and transaction confirmation handling}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages}{: TypeScript, JavaScript, Python, Rust, Golang, C/C++, SQL, Bash} \\
+    \textbf{Frontend}{: React, Next.js, Tailwind CSS, Zustand, TanStack Query, Framer Motion} \\
+    \textbf{Backend}{: Node.js, Express, Hono.js, GraphQL, REST APIs, WebSockets, Prisma} \\
+    \textbf{Web3}{: Solana, Ethereum, Solidity, Web3.js, Ethers.js, Wagmi, Wallet Adapters} \\
+    \textbf{Databases}{: PostgreSQL, MongoDB, Redis, MySQL} \\
+    \textbf{DevOps}{: Docker, Kubernetes, AWS (EC2, S3, Lambda), GitHub Actions, Apache Kafka, Cloudflare} \\
+    \textbf{Tools}{: Git, Linux, Postman, Turborepo, Vitest, Jest}
+  }}
+\end{itemize}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading{Central University of Rajasthan}{Ajmer, Rajasthan}{Bachelor of Technology in Computer Science and Engineering}{Aug 2023 -- May 2027}
+  \resumeItemListStart
+    \resumeItem{\textbf{CGPA:} 8.66/10 (Current)}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
